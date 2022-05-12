@@ -1,5 +1,4 @@
-var botaoApertado = 0;
-var permitido = true;
+var cliques = 0;
 const texto = document.getElementById('texto');
 const botao = document.getElementById('botao');
 const mensagens = {
@@ -13,9 +12,9 @@ const mensagens = {
     5000: 'SUFICIENTE É SUFICIENTE! Vá tocar grama, ô seu viciado em clicar em um botão aleatório que você achou em um site aleatório!'
 };
 function emClique() {
-    botaoApertado += 1;
-    botao.innerHTML = `Aperte este botão. (${botaoApertado})`;
-    if (mensagens[botaoApertado] === undefined) {} else {
-        texto.innerHTML = mensagens[botaoApertado]
+    cliques += 1;
+    botao.innerHTML = `Aperte este botão. (${cliques})`;
+    if (mensagens[cliques] !== undefined) {
+        texto.innerHTML = mensagens[cliques]
     }
 };
