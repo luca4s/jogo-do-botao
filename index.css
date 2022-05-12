@@ -5,10 +5,3 @@ body {
 b {
     font-size: 25;
 }
-.modo {
-    text-align: right;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 98%;
-}
