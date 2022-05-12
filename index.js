@@ -1,6 +1,8 @@
 var cliques = 0;
+var modo = true;
 const texto = document.getElementById('texto');
 const botao = document.getElementById('botao');
+const btnModo = document.getElementById('modo');
 const mensagens = {
     50: '50 vezes, bem legal.',
     100: 'Você realmente se viciou neste "jogo" em? Você apertou o botão 100 vezes...',
@@ -16,5 +18,16 @@ function emClique() {
     botao.innerHTML = `Aperte este botão. (${cliques})`;
     if (mensagens[cliques] !== undefined) {
         texto.innerHTML = mensagens[cliques]
+    }
+};
+function modoEscuro() {
+    if (modo === true) {
+        modo = false
+        btnModo.innerHTML = "Desativar Modo Escuro."
+        document.body.style = "background-color: black; color: white;"
+    } else {
+        modo = true
+        btnModo.innerHTML = "Ativar Modo Escuro."
+        document.body.style = "background-color: white; color: black;"
     }
 };
