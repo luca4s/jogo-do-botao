@@ -24,10 +24,10 @@ function modoEscuro() {
     if (modo === true) {
         modo = false
         btnModo.innerHTML = "Desativar Modo Escuro."
-        document.body.style = "background-color: black; color: white;"
+        document.style = "body { background-color: black; color: white; }"
     } else {
         modo = true
         btnModo.innerHTML = "Ativar Modo Escuro."
-        document.body.style = "background-color: white; color: black;"
+        document.style = "body { background-color: white; color: black; }"
     }
 };
